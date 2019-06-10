@@ -35,7 +35,7 @@ export default {
     }
   },
   created () {
-    this.$axios.get('data.json?id=' + this.seller.id)
+    this.$axios.get('../static/data.json?id=' + this.seller.id)
       .then((res) => {
         // this.seller = res.data.seller
         this.seller = Object.assign({}, this.seller, res.data.seller)
