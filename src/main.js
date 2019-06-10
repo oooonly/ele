@@ -10,7 +10,7 @@ import seller from 'components/seller/seller'
 
 Vue.use(VueRouter)
 Vue.prototype.$axios = axios.create({
-  baseURL: '../static'
+  baseURL: process.env.NODE_ENV === 'production' ? '/ele/static' : '../static'
 })
 
 const router = new VueRouter({
